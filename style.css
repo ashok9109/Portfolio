@@ -94,26 +94,68 @@ nav button:hover {
 .page1 {
     min-height: 100%;
     width: 100%;
-    background-color: black;
+    /* background-color: #06080A; */
 }
 
 .hero-pic {
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
 }
 
-.hero-pic video{
+.hero-pic video {
+    height: 100%;
+    width: 100%;
     z-index: 111;
 }
 
 .hero-pic img {
-    height: 32vmax;
-    width: 60%;
+    height: 31vmax;
+    width: 65%;
     position: absolute;
     top: 11vmax;
-    left: 20vmax;
+    left: 16vmax;
     z-index: 222;
 }
+
+.scroll-div {
+    width: 100%;
+    position: relative;
+    position: absolute;
+    top: 48vmax;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 999;
+}
+
+
+.scroll-div::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-div h1 {
+    background-color: black;
+    color: white;
+    font-family: font1;
+    font-weight: 100;
+    animation-name: scroll-div-animation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll-div-animation {
+    0% {
+        transform: translatex(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* page1-responsive */
 
 @media(max-width:600px) {
 
@@ -126,3 +168,48 @@ nav button:hover {
     }
 
 }
+
+.page2{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+/* 
+.scroll-div {
+    width: 100%;
+    position: relative;
+    position: absolute;
+    top: 48vmax;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 999;
+}
+
+
+.scroll-div::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-div h1 {
+    background-color: black;
+    color: white;
+    font-family: font1;
+    font-weight: 100;
+    animation-name: scroll-div-animation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll-div-animation {
+    0% {
+        transform: translatex(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+} */
