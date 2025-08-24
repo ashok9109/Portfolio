@@ -23,6 +23,7 @@ main {
 /* Navbar code */
 
 nav {
+    position: absolute;
     width: 100%;
     display: flex;
     align-items: center;
@@ -61,17 +62,19 @@ nav button {
 }
 
 nav button:hover {
-    scale: 1.1;
+    scale: 0.8;
 }
 
 /* navbar reponsive */
 
 @media(max-width:600px) {
     nav {
+        position: absolute;
         width: 100%;
-        margin-top: 2vmax;
+        margin-top: 3vmax;
         padding-left: 2vmax;
         padding-right: 2vmax;
+        z-index: 999;
     }
 
     nav h1 {
@@ -94,7 +97,7 @@ nav button:hover {
 .page1 {
     min-height: 100%;
     width: 100%;
-    /* background-color: #06080A; */
+    background-color: #06080A;
 }
 
 .hero-pic {
@@ -159,57 +162,142 @@ nav button:hover {
 
 @media(max-width:600px) {
 
+    .page1 {
+        min-height: 60%;
+    }
+
+    .hero-pic {
+        min-height: 100%;
+    }
+
     .hero-pic img {
         height: 30vmax;
         width: 100%;
         position: absolute;
-        top: 12vmax;
+        top: 15vmax;
         left: 0;
     }
 
+    .scroll-div {
+        margin-top: 3vmax;
+    }
 }
 
-.page2{
+/* page2 code */
+
+.page2 {
+    height: 100vh;
+    width: 100%;
+    color: white;
+    position: relative;
+    background-color: black;
+}
+
+.about-me {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: font1;
+}
+
+.page2-heading {
+    font-size: 3vmax;
+    padding-bottom: 1vmax;
+    color: #FE7D84;
+
+}
+
+.about-container {
+    height: 70%;
+    width: 60%;
+}
+
+.about-container h1 {
+    padding-bottom: 3vmax;
+}
+
+.about-p1 {
+    font-size: 1.3vmax;
+    margin-bottom: 1vmax;
+}
+
+.about-p1 strong{
+    color: #38CDFA;
+}
+
+.about-p2 {
+    font-size: 1.3vmax;
+    margin-bottom: 1vmax;
+}
+
+.about-p2 .mern {
+    color: #FE7D84;
+}
+
+.about-skill{
+    color: #38CDFA;
+}
+
+.about-p3 {
+    font-size: 1.3vmax;
+    margin-bottom: 1vmax;
+}
+
+.about-p4 {
+    font-size: 1.3vmax;
+    margin-bottom: 1vmax;
+}
+
+/* page2 responsive */
+
+@media(max-width:600px){
+    
+.page2 {
+    height: 65vh;
+}
+
+.about-container {
+    height: 70%;
+    width: 100%;
+}
+}
+
+/* page3 code */
+
+
+.page3 {
     height: 100vh;
     width: 100%;
     background-color: black;
-}
-
-/* 
-.scroll-div {
-    width: 100%;
-    position: relative;
-    position: absolute;
-    top: 48vmax;
     display: flex;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    z-index: 999;
+    position: relative;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
 }
 
-
-.scroll-div::-webkit-scrollbar {
-    display: none;
-}
-
-.scroll-div h1 {
-    background-color: black;
+.page3-left {
+    height: 100%;
+    width: 45%;
     color: white;
-    font-family: font1;
-    font-weight: 100;
-    animation-name: scroll-div-animation;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: bisque; */
 }
 
-@keyframes scroll-div-animation {
-    0% {
-        transform: translatex(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-} */
+.page3-right {
+    height: 100%;
+    width: 45%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: cadetblue; */
+}
