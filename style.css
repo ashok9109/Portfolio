@@ -104,7 +104,7 @@ nav button:hover {
     width: 100%;
     position: fixed;
     z-index: 111;
-    display: none;
+    /* display: none; */
 }
 
 .page1 img {
@@ -127,7 +127,6 @@ nav button:hover {
 
     .page1 video {
         position: static;
-        display: none;
     }
 
     .page1 img {
@@ -334,7 +333,9 @@ nav button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     padding-top: 6vmax;
+    z-index: 555;
 }
 
 .page4-top h1 {
@@ -378,6 +379,7 @@ nav button:hover {
     line-height: 1.5;
     font-family: font2;
     font-size: 3vh;
+    margin-top: 5vmax;
 }
 
 
@@ -405,6 +407,7 @@ nav button:hover {
     line-height: 1.5;
     font-family: font2;
     font-size: 3vh;
+    margin-top: 7vmax;
 }
 
 /* page4 reponsive */
@@ -433,62 +436,76 @@ nav button:hover {
     .page4-bottom {
         height: 100%;
         width: 100%;
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-        z-index: 555;
     }
 
     .page4-left {
         height: 100%;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .page4-left h1 {
-        margin: 2vh;
-        font-family: font1;
-    }
-
-    .page4-left h2 {
-        margin: 2vh;
-        font-family: font2;
-        font-size: 6vh;
     }
 
     .page4-left p {
-        line-height: 1.5;
-        font-family: font2;
-        font-size: 3vh;
+        font-size: 2vh;
     }
 
 
     .page4-right {
         height: 100%;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .page4-right h1 {
-        margin: 2vh;
-        font-family: font1;
-    }
-
-    .page4-right h2 {
-        margin: 2vh;
-        font-family: font2;
-        font-size: 6vh;
     }
 
     .page4-right p {
-        line-height: 1.5;
-        font-family: font2;
-        font-size: 3vh;
+        font-size: 2vh;
     }
+}
+
+/* page5 code */
+
+.page5 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 555;
+}
+
+.page5-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 555;
+}
+
+.box {
+    height: 75vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 0.5;
+    color: white;
+    margin: 10px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.box h1 {
+    font-family: font1;
+    opacity: 0;
+}
+
+.box.active{
+    flex: 5;
+}
+
+.box.active h1{
+    opacity: 1;
+}
+
+
+
+@media(max-width:600px){
+  .page5{
+    display: none;
+  }
 }
